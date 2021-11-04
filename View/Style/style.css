@@ -1,0 +1,102 @@
+*{
+    user-select: none;
+    color: white;
+}
+html,body{
+    overflow: hidden;
+    background: url(https://i.pinimg.com/originals/99/4e/53/994e5335b9e54a2bdee1077049c7d653.jpg);
+    padding:0;
+    margin: 0;
+}
+header{
+    background-color: rgba(34, 8, 34, 0.911);
+    color: white;
+    height: 80px;
+    padding-left: 15px;
+    padding: 15px;
+}
+::-webkit-input-placeholder{
+    padding: 15px;
+}
+::-webkit-scrollbar{
+    display: none;
+}
+#chat-input-section{
+    text-align: center;
+    margin-top: 10%;
+}
+#chat-input-section input{
+    outline: none;
+    width: 350px;
+    height: 40px;
+    font-size: 20px;
+    background-color: transparent;
+}
+#chat-input-section button{
+    width: 300px;
+    height: 40px;
+    background-color:transparent;
+}
+#msg-area{
+    overflow-y: scroll;
+    height: 640px;
+    padding-left: 15px;
+}
+#msg-send-area{
+    display: flex;
+    gap: 10px;
+    padding-left: 10px;
+    transition: 1s;
+    position: fixed;
+    bottom:0;
+}
+#msg-send-area input{
+    width: 600px;
+    height: 40px;
+    border-radius: 15px;
+    color: black;
+    border: none;
+}
+#msg-send-area button{
+    width: 48px;
+    border: none;
+    height: 48px;
+    border-radius: 100%;
+    color: black;
+}
+.active-users-area{
+    display: block;
+}
+.hidden-class{
+    display: none;
+}
+.look-class{
+    display: grid;
+}
+.msg-chat{
+    background-color:rgba(34, 8, 34, 0.911);
+    border-radius: 25px;
+    padding: 25px;
+    font-size: 14px;
+    font-weight: bold;
+}
+@media(max-width: 790px){
+    #chat-input-section{
+        text-align: center;
+        margin-top: 25%;
+    }
+    #msg-send-area input{
+        width: 280px;
+        height: 40px;
+        border-radius: 15px;
+        color: black;
+        border: none;
+    }
+    #msg-send-area button{
+        width: 48px;
+        border: none;
+        height: 48px;
+        border-radius: 100%;
+        color: black;
+    }
+}

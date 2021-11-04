@@ -1,0 +1,16 @@
+{
+  "name": "betachat",
+  "version": "1.0.2",
+  "description": "Um projeto feito a fim de recriar um web-chat",
+  "main": "/App/client.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "on": "node client.js"
+  },
+  "author": "Luis Fernando",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1",
+    "socket.io": "^4.3.1"
+  }
+}
