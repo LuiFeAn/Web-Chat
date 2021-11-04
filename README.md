@@ -1,6 +1,6 @@
 # Web-Chat
 Projeto feito a fim de criar um web-chat
-##Instalação
+## Instalação
 npm install
-##Execução
+### Execução
 npm run on
