@@ -16,6 +16,8 @@ const msgSendArea = Only("#msg-send-area");
 const type = Only("#msg-send-area input");
 const submitMsg = Only("#msg-send-area button");
 
+const input = Only("#input-msg");
+
 const clients = Only("#users");
 
 const App = () =>{
@@ -24,6 +26,8 @@ const App = () =>{
            if(client.value != ""){
             usersArea.style.display = "block";
             inputComp.classList.add("hidden-class");
+            inputComp.style.display = "none";
+            chatComp.style.display = "block";
             chatComp.classList.add("look-class");
 
             socket.emit('join-request',client.value)
@@ -38,6 +42,13 @@ const App = () =>{
                 type.value = "";
             }
         }
+
+        input.addEventListener("keypress",(e)=>{
+            if(e.keyCode == '13'){
+                socket.emit("send-msg",type.value);
+                type.value = "";
+            }
+        })
     }
     const SystemMsg = (type,user,msg)=>{
         let p = document.createElement("p");
